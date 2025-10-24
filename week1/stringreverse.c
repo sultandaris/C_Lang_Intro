@@ -9,15 +9,13 @@ void stringreverse(char* source){
     for (i = 0; i < val/2; i++)
     {
         temp = *source;
-        *source = *(end);
-        *(end) = temp;
-        source++;
-        end--;
+        *source++ = *(end);
+        *(end)-- = temp;
     }
 }
 
 int main(){
-    char a[100] = "Sultan";
+    char a[100] = "Kodok";
     stringreverse(a);
     printf("%s\n", a);
     return 0;

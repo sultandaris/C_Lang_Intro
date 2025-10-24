@@ -24,6 +24,31 @@ int main() {
     }
     printf("\n");
     }
+
+        printf("\n");
+
+    ///    
+    int new = 5;
+    for(i = 0;i < count;i++){
+        ptr[i] = realloc(ptr[i], new * sizeof(int));
+    }
+    ///
+
+    for (i = 0; i < count; i++)
+    {
+        for (y = 0; y < new; y++)
+        {
+            ptr[i][y] = y;
+        }
+    }
+
+    for (i = 0; i < count; i++) {
+    for (y = 0; y < new; y++) {
+        printf("%d ", ptr[i][y]);
+    }
+    printf("\n");
+    }
+
     for (i = 0; i < count; i++) {
         free(ptr[i]);
     }

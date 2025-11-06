@@ -16,10 +16,17 @@ void memorymove(void* target, void* source, size_t n){
             t[i] = s[i];
         }
     }
-    
 }
 
 int main(){
     int a[] = {1,2,3,4};
-    memorymove(a+1,a,3 * sizeof(int));
+    int b[] = {0,0,0,0};
+    memorymove(b+1,a,3 * sizeof(int));
+    int i=0;
+    for ( i = 0; i < 4; i++)
+    {
+        printf("%d",b[i]);
+    }
+    
+    return 0;
 }

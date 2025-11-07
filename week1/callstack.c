@@ -34,18 +34,18 @@ int main() {
 
     int a = 13;
     int i;
-    // push(&a, sizeof(int)); 
+    push(&a, sizeof(int)); 
     for (i = 0; i < 3; i++)
     {
         printf("%d ", ptr[i]);
     }
 
-    // a = 0;
-    // pop(&a,sizeof(int));
-    // for (i = 0; i < 2; i++)
-    // {
-    //     printf("%d ", ptr[i]);
-    // }
-    
+    a = 0;
+    pop(&a,sizeof(int));
+    for (i = 0; i < 2; i++)
+    {
+        printf("%d ", ptr[i]);
+    }
+    free(ptr);
     return 0;
 }
